@@ -158,11 +158,19 @@ lex.scan_addons("addons", load=True)
 
 lex.broadcast("on_start", run_function)
 
+```
+
 ### Example 2: Unloading an Addon
+
+```python
 
 lex.unload_addon("addons/example.lex")
 
+```
+
 ### Example 3: Clearing All Addons
+
+```python
 
 lex.clear_all()
 
