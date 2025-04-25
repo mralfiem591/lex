@@ -86,7 +86,6 @@ end
 ### Example `.lex` File
 
 ```code
-
 when on_start:
 greet()
 print("Welcome to the Lex Addon System!")
@@ -96,7 +95,6 @@ when on_test:
 for i in range(3):
     print(f"Test{i}")
 end
-
 ```
 
 ---
@@ -144,7 +142,6 @@ The main class for managing addons and broadcasting events.
 ### Example 1: Basic Usage
 
 ```python
-
 from lexaddon import LexHandler
 
 def run_function(code):
@@ -157,23 +154,18 @@ lex = LexHandler()
 lex.scan_addons("addons", load=True)
 
 lex.broadcast("on_start", run_function)
-
 ```
 
 ### Example 2: Unloading an Addon
 
 ```python
-
 lex.unload_addon("addons/example.lex")
-
 ```
 
 ### Example 3: Clearing All Addons
 
 ```python
-
 lex.clear_all()
-
 ```
 
 ---
