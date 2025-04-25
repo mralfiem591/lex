@@ -41,27 +41,35 @@ project/
 
 Import the `LexHandler` class from `lexaddon.py` into your main application.
 
+```python
 from lexaddon import LexHandler
+```
 
 ### 2. Define a `run_function`
 
 Define a `run_function` in your main application to execute code from addons.
 
+```python
 def run_function(code):
     exec(code)
+```
 
 ### 3. Load Addons
 
 Use the `scan_addons` method to load all `.lex` files from a directory.
 
+```python
 lex = LexHandler()
 lex.scan_addons("addons", load=True)
+```
 
 ### 4. Broadcast Events
 
 Broadcast events to execute the corresponding code blocks in the loaded addons.
 
+```python
 lex.broadcast("on_start", run_function)
+```
 
 ---
 
@@ -69,9 +77,11 @@ lex.broadcast("on_start", run_function)
 
 `.lex` files define event-based code blocks using the following structure:
 
+```code
 when {event_name}:
     # Code to execute when the event is broadcasted
 end
+```
 
 ### Example `.lex` File
 
@@ -167,6 +177,8 @@ Contributions are welcome! If you have ideas for new features or improvements, f
 ---
 
 ## License
+
+**Refer to [LICENCE](LICENCE)**
 
 MIT License
 
