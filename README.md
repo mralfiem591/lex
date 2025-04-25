@@ -178,7 +178,7 @@ Contributions are welcome! If you have ideas for new features or improvements, f
 
 ## License
 
-**Refer to [LICENCE](LICENCE)**
+**Refer to [LICENSE](LICENSE)**
 
 MIT License
 
