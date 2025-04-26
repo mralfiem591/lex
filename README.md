@@ -1,5 +1,7 @@
 # Lex Addon System
+
 > The addon manager of all time.
+
 The **Lex Addon System** is a Python-based framework that allows developers to create and manage addons for their applications. Addons are stored in `.lex` files and can define event-based code blocks that are executed when specific events are broadcasted by the main application.
 
 ---
