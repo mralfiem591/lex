@@ -48,11 +48,14 @@ from lexaddon import LexHandler
 ### 2. Define a `run_function`
 
 Define a `run_function` in your main application to execute code from addons.
+Copy-paste the following function into your code that is using Lex:
 
 ```python
 def run_function(code):
     exec(code)
 ```
+
+This code should not be in any class.
 
 ### 3. Load Addons
 
@@ -164,6 +167,17 @@ lex.unload_addon("addons/example.lex")
 lex.clear_all()
 print("All addons have been cleared.")
 ```
+---
+
+## Debugging
+
+### The Lex handler is not linked to my code, or I get an ImportError:
+#### Your file is **NOT** named `main.py`:
+Lex expects your code file to be named `main.py`. Open the Lex handler script, and change the import to your script name.
+
+#### Your file **IS** named `main.py`:
+Check for errors with your code, and ensure the lex handler is in the same dir as your file.
+If you cannot find why the error is happening, open a **GitHub Issue**.
 
 ---
 
