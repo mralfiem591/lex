@@ -1,5 +1,5 @@
 # Lex Addon System
-
+> The addon manager of all time.
 The **Lex Addon System** is a Python-based framework that allows developers to create and manage addons for their applications. Addons are stored in `.lex` files and can define event-based code blocks that are executed when specific events are broadcasted by the main application.
 
 ---
@@ -55,7 +55,7 @@ def run_function(code):
     exec(code)
 ```
 
-This code should not be in any class.
+This code should not be in any class, as the Lex system is not adjusted for classes. If it is in a class, you will get a NameError.
 
 ### 3. Load Addons
 
@@ -82,9 +82,11 @@ lex.broadcast("on_start", run_function)
 
 ```code
 when {event_name}:
-    # Code to execute when the event is broadcasted
+# Code to execute when the event is broadcasted
 end
 ```
+
+> Note: Despite `.py` using indents, `when` and `end` should not be indented. Any python code between these blocks uses normal python indenting.
 
 ### Example `.lex` File
 
